@@ -342,7 +342,7 @@ client.on('message', message => {
       message.channel.send(helpEmbed);
     }
 });
-const developers = ["442670807240671252"]
+const developers = ["390866409195831296"]
 const adminprefix = "1";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
