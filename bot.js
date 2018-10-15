@@ -142,7 +142,7 @@ client.on('message', async msg => {
             } catch (error) {
                 try {
  
-                    var videos = await youtube.searchVideos(searchString, 5);
+                    var videos = await youtube.searchVideos(searchString, 1);
                     let index = 0;
                     const embed1 = new Discord.RichEmbed()
                     .setTitle(":mag_right:  YouTube Search Results :")
@@ -150,10 +150,10 @@ client.on('message', async msg => {
                     ${videos.map(video2 => `${++index}. **${video2.title}**`).join('\n')}`)
                    
                     .setColor("#f7abab")
-                    msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
+                    //msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
                    
 /////////////////                  
-                    try {
+                    /*try {
  
                         var response = await msg.channel.awaitMessages(msg2 => msg2.content > 0 && msg2.content < 11, {
                             maxMatches: 1,
@@ -163,7 +163,7 @@ client.on('message', async msg => {
                     } catch (err) {
                         console.error(err);
                         return msg.channel.send('No one respone a number!!');
-                    }
+                    }*/
                    
                     const videoIndex = parseInt(response.first().content);
                     var video = await youtube.getVideoByID(videos[0].id);
@@ -522,7 +522,7 @@ client.on('message', async msg => {
             } catch (error) {
                 try {
  
-                    var videos = await youtube.searchVideos(searchString, 5);
+                    var videos = await youtube.searchVideos(searchString, 1);
                     let index = 0;
                     const embed1 = new Discord.RichEmbed()
                     .setTitle(":mag_right:  YouTube Search Results :")
@@ -530,10 +530,10 @@ client.on('message', async msg => {
                     ${videos.map(video2 => `${++index}. **${video2.title}**`).join('\n')}`)
                    
                     .setColor("#f7abab")
-                    msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
+                    //msg.channel.sendEmbed(embed1).then(message =>{message.delete(20000)})
                    
 /////////////////                  
-                    try {
+                    /*try {
  
                         var response = await msg.channel.awaitMessages(msg2 => msg2.content > 0 && msg2.content < 11, {
                             maxMatches: 1,
@@ -543,7 +543,7 @@ client.on('message', async msg => {
                     } catch (err) {
                         console.error(err);
                         return msg.channel.send('No one respone a number!!');
-                    }
+                    }*/
                    
                     const videoIndex = parseInt(response.first().content);
                     var video = await youtube.getVideoByID(videos[0].id);
